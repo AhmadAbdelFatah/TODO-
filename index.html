@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Todo app</title>
+  </head>
+  <body>
+    <main class="app">
+      <div class="app__wrapper">
+        <header class="header">
+          <div class="header__left">T O D O</div>
+          <div class="header__right" tabindex="0">
+            <img src="public/images/icon-moon.svg" alt="toggle theme" />
+          </div>
+        </header>
+        <form>
+          <input
+            id="toggle__checkbox"
+            class="toggle__checkbox"
+            type="checkbox"
+          />
+          <label class="toggle__label" for="togglecheckbox"></label>
+          <input
+            class="form__input"
+            type="text"
+            placeholder="Create a new todo..."
+            required
+          />
+          <button class="addtask__button" type="submit"></button>
+        </form>
+        <ul class="tasks__list">
+          <p class="empty__list">The task list is empty.</p>
+        </ul>
+        <div class="tasks__list-footer">
+          <div class="top">
+            <p class="items"><span class="items-number"></span> items left</p>
+          </div>
+          <div class="bottom">
+            <button class="all-tasks">All</button>
+            <button class="active-tasks">Active</button>
+            <button class="completed-tasks">Completed</button>
+          </div>
+          <button class="reset-tasks" type="reset">Clear Completed</button>
+        </div>
+        <div class="tasks__list-footer-mobile">
+          <button class="all-tasks">All</button>
+          <button class="active-tasks">Active</button>
+          <button class="completed-tasks">Completed</button>
+        </div>
+        <p class="drag-drop__text">Drag and drop to reorder list</p>
+      </div>
+    </main>
+
+    <script src="./scripts/script.js" type="module"></script>
+  </body>
+</html>
